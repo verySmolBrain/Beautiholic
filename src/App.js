@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  ChakraProvider,
+  Flex,
+  Image,
+  Heading,
+} from "@chakra-ui/react";
+import customTheme from "./components/customTheme"
+import Model from "./assets/woman_smol.png"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider theme={customTheme}>
+      <Flex flexDirection="column" justify="flex-end" align="flex-start" minH="100vh" w="100%" bg="watermillion.100">
+        <Flex as="h1" h="15vh" justify="center" align="center" width="100%">
+          <Heading>Beautiholic</Heading>
+        </Flex>
+
+        <Flex>
+          <Image maxH="85vh" objectFit="scale-down" src={Model} alt="asian woman"/>
+        </Flex>
+      </Flex>
+
+      <Flex justify="center" align="center" minH="100vh" w="100%" bg="feeling_orange.100">
+      </Flex>
+
+      <Flex justify="center" align="center" minH="100vh" w="100%" bg="orange_sherbert.100">
+      </Flex>
+
+      <Flex justify="center" align="center" minH="100vh" w="100%" bg="lime.100">
+        
+      </Flex>
+    </ChakraProvider>
   );
 }
 
 export default App;
+
+// Opening
+// Gallery (Should be pretty easy)
+// Booking (Have to design but shouldn't be that hard)
+// About Us ()
